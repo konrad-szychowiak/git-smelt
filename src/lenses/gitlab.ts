@@ -1,5 +1,11 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import Lens from './lens';
+
+async function request(requestProps: object) {
+  const response = await axios(requestProps) as unknown as AxiosResponse<object[]>;
+  const { data } = response;
+  return data;
+}
 
 class GitLabLens extends Lens {
     private url: string;
@@ -12,18 +18,37 @@ class GitLabLens extends Lens {
     getUser = async function (username) {
       const url = `${this.url}/users?username=${username}`;
 
-      const { data } = await axios({
+      const [data] = await request({
         method: 'get',
         url,
       });
 
-      console.log(data);
+      if (data) return data;
+      throw `A user with username: ${username} does not exist in gitlab instance: ${this.url}`;
+    }
 
-      const [user] = data;
+    getUserRepos = async function (userID) {
+      const url = `${this.url}/users/${userID}/projects`;
 
-      console.log(user);
+      const [data] = await request({
+        method: 'get',
+        url,
+      });
 
-      return user;
+      if (data) return data;
+      throw `User with id: ${userID} does not exist in gitlab instance: ${this.url}`;
+    }
+
+    getRepo = async function (repoID) {
+      const url = `${this.url}/projects/${repoID}`;
+
+      const [data] = await request({
+        method: 'get',
+        url,
+      });
+
+      if (data) return data;
+      throw `Project with id: ${repoID} does not exist in gitlab instance: ${this.url}`;
     }
 }
 

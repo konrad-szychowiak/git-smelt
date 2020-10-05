@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "@octokit/core": "^3.1.2",
-    "axios": "^0.20.0"
+    "@types/highland": "^2.12.10",
+    "axios": "^0.20.0",
+    "highland": "^2.13.5",
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.3.0",
