@@ -18,3 +18,5 @@ rules:
     - off
   'import/no-unresolved':
     - warn
+  'camelcase':
+    - off

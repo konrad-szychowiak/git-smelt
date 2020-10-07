@@ -9,6 +9,11 @@ export class GitHubSmelter extends BaseSmelter {
       super(new Octokit({ auth }));
     }
 
+    /**
+     * GET data about a given user
+     * from GitHub API.
+     * @param {string} username GitHub login.
+     */
     async getUser(username) {
       const res = await this.engine.request('GET /users/{username}', {
         username,
@@ -17,6 +22,12 @@ export class GitHubSmelter extends BaseSmelter {
       return data;
     }
 
+    /**
+     * GET data about a given repo
+     * from GitHub API.
+     * @param {string} owner login of the repo's owner.
+     * @param {string} repo name of the repo.
+     */
     async getRepo(owner: string, repo: string) {
       const res = await this.engine.request('GET /repos/{owner}/{repo}', {
         owner,

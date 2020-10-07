@@ -13,6 +13,11 @@ class GitLabSmelter extends BaseSmelter {
       super(useEngine(instance));
     }
 
+    /**
+     * GET data about a given user
+     * from GitLab API.
+     * @param {string} username GitLab username.
+     */
     async getUser(username) {
       const endpoint = `/users?username=${username}`;
       const [data] = await this.engine.get(endpoint);
@@ -20,10 +25,9 @@ class GitLabSmelter extends BaseSmelter {
     }
 
     /**
-     * Make GET request to the GitLab's API to get data
-     * about a repo (GitLab project).
-     * @param {string} repoID ID of the GitLab project you want
-     * to fetch from the API.
+     * GET data about a project
+     * from GitLab API.
+     * @param {string} repoID id of the gitlab project you are looking for
      */
     async getRepo(repoID: string) {
       const url = `${this.url}/projects/${repoID}`;
