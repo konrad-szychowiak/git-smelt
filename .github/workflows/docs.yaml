@@ -24,5 +24,8 @@ jobs:
       - name: 'Docz build'
         run: 'npm run docz:build --dest docz'
 
+      - name: 'Docz add to git'
+        run: 'git subtree add ./docz --prefix docz'
+
       - name: 'Publish'
         run: 'git subtree push --prefix docz origin gh-pages'
