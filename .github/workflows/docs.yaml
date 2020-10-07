@@ -24,8 +24,11 @@ jobs:
       - name: 'Docz build'
         run: 'npx docz build --dest build'
 
+      - name: 'Debug: created files'
+        run: 'ls -al --group-directories-first --'
+
       - name: 'Docz add to git'
-        run: 'git add dist && git commit -m "Publish"'
+        run: 'git add . && git commit -m "Publish"'
 
       - name: 'Publish'
         run: 'git subtree push --prefix docz origin gh-pages'
