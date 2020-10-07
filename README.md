@@ -42,7 +42,7 @@ This is how we unify the access points to data.
 > This is due to different designs in providers' APIs.
 > We are currently looking for acceptable solutions to this problem.
 
-Currently, you can access some of the **GutHub**'s and **GitLab**'s API endpoints, with:
+Currently, you can access some of the **GitHub**'s and **GitLab**'s API endpoints, with:
 
 + **`GitHubSmelter`**/`github()` for GitHub v3 REST API
 + **`GitLabSmelter`**/`gitlab()` for GitLab v4 REST API
