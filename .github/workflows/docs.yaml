@@ -22,10 +22,13 @@ jobs:
         run: 'npm install'
 
       - name: 'Docz build'
-        run: 'npm run docz:build --dest docz'
+        run: 'docz build --dest build'
 
       - name: 'Docz add to git'
-        run: 'git subtree add ./docz --prefix docz'
+        run: 'git add dist && git commit -m "Publish"'
 
       - name: 'Publish'
         run: 'git subtree push --prefix docz origin gh-pages'
+
+      - name: 'Cleanup'
+        run: 'rm -rfv -- .docz dist'
