@@ -1,6 +1,6 @@
 {
   "name": "git-smelt",
-  "version": "0.2.0-alpha.1",
+  "version": "0.2.0-beta",
   "description": "A NPM package, that provides unified access to the APIs of different git hosting providers.",
   "keywords": [
     "git",
