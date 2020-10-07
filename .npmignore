@@ -1,5 +1,6 @@
 .idea
-src
+src/
+docs/
 gulpfile.js
 tsconfig.json
 .eslintrc.yml
