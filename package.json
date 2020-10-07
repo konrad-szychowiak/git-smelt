@@ -1,4 +1,9 @@
 {
+  "name": "git-smelt",
+  "version": "0.1.0",
+  "description": "An NPM package that unifies access to API's of multiple git hosting providers",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "dependencies": {
     "@octokit/core": "^3.1.2",
     "axios": "^0.20.0"
