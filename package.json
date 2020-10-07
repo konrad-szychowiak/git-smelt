@@ -1,7 +1,19 @@
 {
   "name": "git-smelt",
-  "version": "0.1.0",
+  "version": "0.2.0-alpha.1",
   "description": "A NPM package, that provides unified access to the APIs of different git hosting providers.",
+  "keywords": [
+    "git",
+    "git providers",
+    "github",
+    "gitlab",
+    "api",
+    "unified api",
+    "common api",
+    "typescript",
+    "smelt"
+  ],
+  "repository": "https://github.com/konrad-szychowiak/git-smelt/settings",
   "license": "MPL-2.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
