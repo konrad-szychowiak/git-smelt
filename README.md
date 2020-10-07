@@ -84,9 +84,10 @@ gitlab().getRepo('some ID' as number)
 > You can download https://github.com/konrad-szychowiak/git-smelt/settings
 > install the deps and run `gulp docs` to get `docs/` folder with html docs from TypeDoc. 
 
-## Authors
+## Contributors
 
-+ [@konrad-szychowiak] main creator
++ **[konrad-szychowiak]** [@szychowiakk] main creator
++ **[srflp]** 
 
 ## License
 
@@ -94,4 +95,6 @@ gitlab().getRepo('some ID' as number)
 
 [MPL-2.0]: ./LICENSE
 [Changelog]: ./CHANGELOG.md
-[@konrad-szychowiak]: https://github.com/konrad-szychowiak
+[konrad-szychowiak]: https://github.com/konrad-szychowiak
+[@szychowiakk]: https://twitter.com/szychowiakk
+[srflp]: https://github.com/srflp
