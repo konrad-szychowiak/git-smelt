@@ -22,7 +22,7 @@ jobs:
         run: 'npm install'
 
       - name: 'Docz build'
-        run: 'docz build --dest build'
+        run: 'npx docz build --dest build'
 
       - name: 'Docz add to git'
         run: 'git add dist && git commit -m "Publish"'
