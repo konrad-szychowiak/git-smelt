@@ -27,6 +27,9 @@ jobs:
       - name: 'Debug: created files'
         run: 'ls -al --group-directories-first --'
 
+      - name: 'Login to git'
+        run: 'git config user.email ${{ secrets.DOCS_EMAIL }} && git config user.name ${{ secrets.DOCS_NAME }}'
+
       - name: 'Docz add to git'
         run: 'git add . && git commit -m "Publish"'
 
