@@ -28,7 +28,7 @@ jobs:
         run: 'ls -al --group-directories-first --'
 
       - name: 'Login to git'
-        run: 'git config user.email ${{ secrets.DOCS_EMAIL }} && git config user.name ${{ secrets.DOCS_NAME }}'
+        run: 'git config user.email "no@no.no" && git config user.name "No No"'
 
       - name: 'Docz add to git'
         run: 'git add . && git commit -m "Publish"'
