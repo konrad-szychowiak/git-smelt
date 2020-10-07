@@ -1,0 +1,33 @@
+---
+name: Introduction
+route: /
+---
+
+# Introduction
+
+[`git-smelt`] is a library designed to facilitate usage of different git hosts' APIs.
+
+The solution is based on [_smelters_] – classes, that provide methods to access
+specific endpoints on the hosts' side. For example you can use `getUser` on any [_smelter_][_smelters_]
+to get user data from **any** of the supported providers.
+
+The following will work:
+```js
+import { gitlab, github } from 'git-smelt'
+
+const myUsername = 'konrad-szychowiak';
+const providers = [ gitlab, github ];
+providers.forEeach((provider) => {
+  provider
+    .getUser(myUsername)
+    .then(r => {
+      console.log(r);
+    })
+    .catch(e => {
+      console.error(e);
+    });
+});
+```
+
+[`git-smelt`]: https://www.npmjs.com/package/git-smelt
+[_smelters_]: ./smelters/about
