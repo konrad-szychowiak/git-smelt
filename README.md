@@ -52,11 +52,11 @@ Fetches info about:
 + (`github`) a repository
 + (`gitlab`) a project
 
-```js
-github().getUser('username')
+```ts
+github().getRepo('konrad-szychowiak', 'git-smelt')
   // .then()
   // .catch()
-gitlab().getUser('username')
+gitlab().getRepo('some ID' as number)
   // .then()
   // .catch()
 ```

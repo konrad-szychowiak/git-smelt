@@ -1,6 +1,5 @@
+.idea
 src
 gulpfile.js
 tsconfig.json
-
-README.md
-LICENSE
+.eslintrc.yml
