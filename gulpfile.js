@@ -7,6 +7,7 @@ task('lib', () => src('src/**/*.ts')
     target: 'es5',
     module: 'commonjs',
     declaration: true,
+    experimentalDecorators: true,
   }))
   .pipe(dest('lib')));
 

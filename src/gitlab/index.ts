@@ -1,5 +1,5 @@
 import BaseSmelter from '../prototypes/baseSmelter';
-import { engine, GitLabEngine } from './engine';
+import { GitLabEngine } from './engine';
 
 const useEngine = (instance) => {
   const instanceAPI = `https://${instance}/api/v4`;
@@ -30,14 +30,11 @@ class GitLabSmelter extends BaseSmelter {
      * @param {string} repoID id of the gitlab project you are looking for
      */
     async getRepo(repoID: string) {
-      const url = `${this.url}/projects/${repoID}`;
-
-      const [data] = await engine({
-        method: 'get',
-        url,
-      });
-
+      const endpoint = `/projects/${repoID}`;
+      const [data] = await this.engine.get(endpoint);
       if (data) return data;
+      // TODO: Fix that
+      // eslint-disable-next-line no-throw-literal
       throw `Project with id: ${repoID} does not exist in gitlab instance: ${this.url}`;
     }
 }

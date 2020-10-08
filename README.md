@@ -5,7 +5,11 @@
 ![npm type definitions](https://img.shields.io/npm/types/git-smelt?style=flat-square)
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/git-smelt?style=flat-square)
 
-🚧 A NPM package, that provides unified access to the APIs of different git hosting providers.
+> 🚧 A NPM package, that provides unified access to the APIs of different git hosting providers.
+
+**Problem:**
+There are many platforms, that provide git hosting.
+All of them also provide their own APIs, allowing us to perform different actions.
 
 ## Installation and Usage
 
