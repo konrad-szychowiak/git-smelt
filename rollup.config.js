@@ -1,3 +1,4 @@
+// eslint-disable-next-line max-classes-per-file
 import dts from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
 import { terser } from 'rollup-plugin-terser';
