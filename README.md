@@ -4,13 +4,15 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/konrad-szychowiak/git-smelt?style=flat-square)
 ![npm type definitions](https://img.shields.io/npm/types/git-smelt?style=flat-square)
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/git-smelt?style=flat-square)
-[![codecov](https://codecov.io/gh/konrad-szychowiak/git-smelt/branch/master/graph/badge.svg)](https://codecov.io/gh/konrad-szychowiak/git-smelt)
 
 > 🚧 A NPM package, that provides unified access to the APIs of different git hosting providers.
 
 **Problem:**
 There are many platforms, that provide git hosting.
 All of them also provide their own APIs, allowing us to perform different actions.
+
+**Solution:**
+`git-smelt` tries to provide one, unified API to access data from git hosting providers.
 
 ## Installation and Usage
 
