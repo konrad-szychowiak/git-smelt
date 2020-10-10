@@ -1,18 +1,16 @@
 import { Octokit } from '@octokit/core';
-import { GitLabEngine } from '../gitlab/engine';
+import { GitLabEngine } from './gitlab/engine';
 
 type EngineLike = GitLabEngine | Octokit;
 
-class BaseSmelter {
+export class BaseSmelter {
     private _engine: EngineLike;
 
     get engine(): EngineLike {
       return this._engine;
     }
 
-    constructor(engine: EngineLike) {
+    constructor(engine?: EngineLike) {
       this._engine = engine;
     }
 }
-
-export default BaseSmelter;
