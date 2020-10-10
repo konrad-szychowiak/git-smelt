@@ -35,6 +35,17 @@ import { github } from 'git-smelt';
 github()
 ```
 
+### Build
+```shell script
+# get dependencies:
+npm i         # or:
+yarn
+
+# and build the lib/ folder with
+gulp       # cleans before compiling
+gulp build # only compiles the library
+```
+
 ## Smelters
 
 **Smelters** are the interface to providers' APIs.
@@ -71,10 +82,10 @@ Fetches info about:
 + (`gitlab`) a project
 
 ```ts
-github().getRepo('konrad-szychowiak', 'git-smelt')
+github().getRepoByName('konrad-szychowiak', 'git-smelt')
   // .then()
   // .catch()
-gitlab().getRepo('some ID' as number)
+gitlab().getRepoByID(id as number)
   // .then()
   // .catch()
 ```
