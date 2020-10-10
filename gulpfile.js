@@ -6,7 +6,7 @@ const del = require('del');
 
 task('clean', () => del('lib/**', { force: true }));
 
-task('build', () => src(['src/**/*.ts', '!src/**/*.test.ts'])
+task('build', () => src(['src/**/*.ts', '!src/**/*.test.ts', '!src/**/__mock__'])
   .pipe(ts({
     target: 'es5',
     module: 'commonjs',

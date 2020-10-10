@@ -40,7 +40,7 @@ export class GitLabSmelter extends BaseSmelter {
   async getUser(username) {
     const endpoint = `/users?username=${username}`;
     const [data] = await this.engine.get(endpoint);
-    if (data) return data;
+    if (data !== {}) return data;
     throw this.resourceError(`user with name: ${username}`);
   }
 
