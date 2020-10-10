@@ -1,6 +1,11 @@
-.idea
+.idea/
+.github/
 src/
 docs/
-gulpfile.js
+coverage/
+
+# configs
+.eslintrc.yaml
 tsconfig.json
-.eslintrc.yml
+gulpfile.js
+jest.config.js
