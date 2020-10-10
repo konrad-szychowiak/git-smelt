@@ -4,6 +4,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/konrad-szychowiak/git-smelt?style=flat-square)
 ![npm type definitions](https://img.shields.io/npm/types/git-smelt?style=flat-square)
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/git-smelt?style=flat-square)
+[![codecov](https://codecov.io/gh/konrad-szychowiak/git-smelt/branch/master/graph/badge.svg)](https://codecov.io/gh/konrad-szychowiak/git-smelt)
 
 > 🚧 A NPM package, that provides unified access to the APIs of different git hosting providers.
 
