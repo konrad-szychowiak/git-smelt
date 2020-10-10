@@ -11,6 +11,9 @@
 There are many platforms, that provide git hosting.
 All of them also provide their own APIs, allowing us to perform different actions.
 
+**Solution:**
+`git-smelt` tries to provide one, unified API to access data from git hosting providers.
+
 ## Installation and Usage
 
 ### Installation

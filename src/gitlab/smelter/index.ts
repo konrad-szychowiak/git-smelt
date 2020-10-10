@@ -22,7 +22,6 @@ export class GitLabSmelter extends BaseSmelter {
      * Return an error, if given resource does not exist
      * on the gitlab instance targeted by this smelter.
      * @param {string} resourceDescription description of the requested resource.
-     * @private
      */
   resourceError(resourceDescription: string) {
     return ResourceNotOnInstanceError.fromEngine(this.engine as GitLabEngine, resourceDescription);
@@ -40,7 +39,7 @@ export class GitLabSmelter extends BaseSmelter {
   async getUser(username) {
     const endpoint = `/users?username=${username}`;
     const [data] = await this.engine.get(endpoint);
-    if (data) return data;
+    if (data !== {}) return data;
     throw this.resourceError(`user with name: ${username}`);
   }
 
