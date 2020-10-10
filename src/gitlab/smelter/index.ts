@@ -22,7 +22,6 @@ export class GitLabSmelter extends BaseSmelter {
      * Return an error, if given resource does not exist
      * on the gitlab instance targeted by this smelter.
      * @param {string} resourceDescription description of the requested resource.
-     * @private
      */
   resourceError(resourceDescription: string) {
     return ResourceNotOnInstanceError.fromEngine(this.engine as GitLabEngine, resourceDescription);
