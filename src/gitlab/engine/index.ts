@@ -1,15 +1,19 @@
 import axios, { AxiosResponse } from 'axios';
 
 export class GitLabEngine {
-  constructor(url) {
-    // TODO: gitlab instance url validation
-    this._url = url;
-  }
-
     private _url: string;
 
     get url(): string {
       return this._url;
+    }
+
+    constructor(url) {
+    // TODO: gitlab instance url validation
+      this._url = url;
+    }
+
+    static fromURL(url) {
+      return new GitLabEngine(url);
     }
 
     async request(method: 'get', endpoint: string) {
