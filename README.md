@@ -5,7 +5,7 @@
 ![npm type definitions](https://img.shields.io/npm/types/git-smelt?style=flat-square)
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/git-smelt?style=flat-square)
 
-> 🚧 A NPM package, that provides unified access to the APIs of different git hosting providers.
+> 🚧 An NPM package, that unifies access to different git hosting services.
 
 + [Why?](#-why)
 + [Compatibility](#-compatibility) with JavaScript module models
@@ -97,7 +97,7 @@ Currently, you can access some of the **GitHub**'s and **GitLab**'s API endpoint
 
 > 🚧 Detailed API docs are in progress. 
 >
-> You can download https://github.com/konrad-szychowiak/git-smelt/settings
+> You can download https://github.com/konrad-szychowiak/git-smelt
 > install the deps and run `gulp docs` to get `docs/` folder with html docs from TypeDoc. 
 
 ### Users
@@ -143,7 +143,7 @@ github().getRepoByName('konrad-szychowiak', 'git-smelt')
 ## ⏲️ [Changelog]
 
 ## ✍️ Contributors
-+ **[konrad-szychowiak]** [@szychowiakk] main creator
++ **[konrad-szychowiak]** main creator
 + **[srflp]** 
 
 ## ⚖️ License
@@ -153,5 +153,4 @@ github().getRepoByName('konrad-szychowiak', 'git-smelt')
 [MPL-2.0]: ./LICENSE
 [Changelog]: ./CHANGELOG.md
 [konrad-szychowiak]: https://github.com/konrad-szychowiak
-[@szychowiakk]: https://twitter.com/szychowiakk
 [srflp]: https://github.com/srflp
