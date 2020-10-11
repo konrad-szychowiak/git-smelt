@@ -14,11 +14,6 @@ export class GitHubSmelter extends BaseSmelter {
       return this._client;
     }
 
-    /**
-     * GET data about a given user
-     * from GitHub API.
-     * @param {string} username GitHub login.
-     */
     async getUser(username) {
       const res = await this.client.request('GET /users/:username', {
         username,
