@@ -1,5 +1,5 @@
 import {
-  gitlab, github, GitLabSmelter, GitHubSmelter,
+  github, GitHubSmelter, gitlab, GitLabSmelter,
 } from '../index';
 
 const ShortcutFunctionDescriptor = (shortcut: Function, smelter: Function) => ({

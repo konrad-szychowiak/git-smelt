@@ -7,7 +7,7 @@ export function apiURLFromInstanceName(instanceName) {
   return `https://${instanceName}/api/v4`;
 }
 
-function encodeURIFromPath(...pathElements) {
+export function encodeURIFromPath(...pathElements) {
   const fullPath = pathElements.join('/');
   return encodeURIComponent(fullPath);
 }
@@ -23,11 +23,6 @@ export class GitLabSmelter extends BaseSmelter {
     return GitLabSmelter.fromURL(instanceURL);
   }
 
-  /**
-     * Return an error, if given resource does not exist
-     * on the gitlab instance targeted by this smelter.
-     * @param {string} resourceDescription description of the requested resource.
-     */
   resourceError(resourceDescription: string) {
     return ResourceNotOnInstanceError.fromEngine(this.engine as GitLabEngine, resourceDescription);
   }
@@ -48,8 +43,6 @@ export class GitLabSmelter extends BaseSmelter {
 
   async getRepoByName(owner: string, repo: string) {
     const repoURI = encodeURIFromPath(owner, repo);
-    // FIXME
-    console.log(repoURI);
     return this.getRepoByID(repoURI);
   }
 }
