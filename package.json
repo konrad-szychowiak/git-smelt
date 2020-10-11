@@ -1,7 +1,7 @@
 {
   "name": "git-smelt",
-  "version": "0.2.2",
-  "description": "A NPM package, that provides unified access to the APIs of different git hosting providers.",
+  "version": "0.2.3",
+  "description": "An NPM package, that unifies access to different git hosting services.",
   "keywords": [
     "git",
     "git providers",
@@ -13,7 +13,7 @@
     "typescript",
     "smelt"
   ],
-  "repository": "https://github.com/konrad-szychowiak/git-smelt/settings",
+  "repository": "https://github.com/konrad-szychowiak/git-smelt",
   "license": "MPL-2.0",
   "main": "lib/index.js",
   "module": "lib/index.mjs",

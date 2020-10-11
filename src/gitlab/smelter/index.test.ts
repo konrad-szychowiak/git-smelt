@@ -1,4 +1,4 @@
-import { apiURLFromInstanceName, GitLabSmelter } from './index';
+import { apiURLFromInstanceName, encodeURIFromPath, GitLabSmelter } from './index';
 import { GitLabEngine } from '../engine';
 import { BaseSmelter } from '../../baseSmelter';
 
@@ -13,6 +13,13 @@ const URL_IN_ENGINE_PROPERTY = `${ENGINE_PROPERTY}.url`;
 
 test("Properly generate API address from GitLab instance's domain name.", () => {
   expect(API_ADDRESS).toBe(`https://${INSTANCE_ADDRESS}/api/v4`);
+});
+
+test("URI should be properly encoded to pass it as a gitlab project's id.", () => {
+  const pathElements = ['hello', 'world'];
+  const encodedURIFromBuiltInEncoder = encodeURIComponent('hello/world');
+  const encodedUIFromTheFunction = encodeURIFromPath(...pathElements);
+  expect(encodedUIFromTheFunction).toMatch(encodedURIFromBuiltInEncoder);
 });
 
 describe('Many ways to create a smelter', () => {
