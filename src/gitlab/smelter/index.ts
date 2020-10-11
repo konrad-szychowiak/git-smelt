@@ -7,6 +7,11 @@ export function apiURLFromInstanceName(instanceName) {
   return `https://${instanceName}/api/v4`;
 }
 
+function encodeURIFromPath(...pathElements) {
+  const fullPath = pathElements.join('/');
+  return encodeURIComponent(fullPath);
+}
+
 export class GitLabSmelter extends BaseSmelter {
   static fromURL(url: string): GitLabSmelter {
     const engine = GitLabEngine.fromURL(url);
@@ -31,41 +36,20 @@ export class GitLabSmelter extends BaseSmelter {
     return new WIPError(resourceDescription, this);
   }
 
-  /**
-     * GET data about a given user
-     * from GitLab API.
-     * @param {string} username GitLab username.
-     */
   async getUser(username) {
     const endpoint = `/users?username=${username}`;
-    const [data] = await this.engine.get(endpoint);
-    if (data !== {}) return data;
-    throw this.resourceError(`user with name: ${username}`);
+    return this.engine.get(endpoint);
   }
 
-  /**
-     * GET data about a project
-     * from GitLab API
-     * based on the project's ID.
-     * @param {string} repoID id of the gitlab project you are looking for
-     */
-  async getRepoByID(repoID: string) {
+  async getRepoByID(repoID: number | string) {
     const endpoint = `/projects/${repoID}`;
-    const [data] = await this.engine.get(endpoint);
-    if (data) return data;
-    // TODO: Fix that
-    throw this.resourceError(`repo with id: ${repoID}`);
+    return this.engine.get(endpoint);
   }
 
-  /**
-     * GET data about a project
-     * from GitLab API
-     * based on the project's ID.
-     * @param {string} repoID id of the gitlab project you are looking for
-     */
-  // async
-  getRepoByName(/* owner: string, repo: string */) {
-    // TODO: find how to get repo by path from gitlab API
-    throw this.wipError('method: getRepoByName');
+  async getRepoByName(owner: string, repo: string) {
+    const repoURI = encodeURIFromPath(owner, repo);
+    // FIXME
+    console.log(repoURI);
+    return this.getRepoByID(repoURI);
   }
 }

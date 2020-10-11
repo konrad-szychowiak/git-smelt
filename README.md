@@ -118,16 +118,22 @@ Fetch info about:
 + (`github`) a repository
 + (`gitlab`) a project
 
-#### `getRepoByID()`
+#### `getRepoByID(id: number | string)`
 ```ts
 gitlab().getRepoByID(id)
   // .then()
   // .catch()
+github().getRepoByID(id)
+  // .then()
+  // .catch()
 ```
  
-#### `getRepoByName()`
+#### `getRepoByName(owner: string, repo: string)`
 Requires the name of the repository, including its owner.
 ```ts
+gitlab().getRepoByName('sparks-team', 'po-drodze')
+  // .then()
+  // .catch()
 github().getRepoByName('konrad-szychowiak', 'git-smelt')
   // .then()
   // .catch()
