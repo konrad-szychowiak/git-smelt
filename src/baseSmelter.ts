@@ -1,7 +1,8 @@
 import { Octokit } from '@octokit/core';
 import { GitLabEngine } from './gitlab/engine';
+import { GitHubEngine } from './github/engine';
 
-type EngineLike = GitLabEngine | Octokit;
+type EngineLike = GitLabEngine | GitHubEngine | Octokit;
 
 export class BaseSmelter {
     private _engine: EngineLike;

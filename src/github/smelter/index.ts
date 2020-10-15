@@ -1,58 +1,39 @@
-import { Octokit } from '@octokit/core';
 import { AxiosResponse } from 'axios';
 import { BaseSmelter } from '../../baseSmelter';
+import { GitHubEngine } from '../engine';
 
 export class GitHubSmelter extends BaseSmelter {
   constructor(auth?: string) {
-    super(new Octokit());
-    this.setClient(auth && { auth });
+    super(new GitHubEngine(auth && { auth }));
   }
 
-    private _client: Octokit;
+  async getUser(username) {
+    const res = await this.engine.request('GET /users/:username', {
+      username,
+    });
+    const { data } = res as unknown as AxiosResponse<object[]>;
+    return data;
+  }
 
-    get client() {
-      return this._client;
-    }
+  async getRepoByID(repoID: string) {
+    // TODO: assure id is numeric
+    return this.engine.request('GET /repositories/:id', { id: repoID });
+  }
 
-    async getUser(username) {
-      const res = await this.client.request('GET /users/:username', {
-        username,
-      });
-      const { data } = res as unknown as AxiosResponse<object[]>;
-      return data;
-    }
+  async getRepoByName(owner: string, repo: string) {
+    return this.engine.request('GET /repos/{owner}/{repo}', {
+      owner,
+      repo,
+    });
+  }
 
-    async getRepoByID(repoID: string) {
-      // TODO: assure id is numeric
-      const res = await this.client.request('GET /repositories/:id', { id: repoID });
-      const { data } = res as unknown as AxiosResponse<object[]>;
-      return data;
-    }
+  async getGroupByID(groupID: number) {
+    return this.engine.request('GET /orgs/:id', { id: groupID });
+  }
 
-    async getRepoByName(owner: string, repo: string) {
-      const res = await this.client.request('GET /repos/{owner}/{repo}', {
-        owner,
-        repo,
-      });
-      const { data } = res as unknown as AxiosResponse<object[]>;
-      return data;
-    }
-
-    async getGroupByID(groupID: number) {
-      const res = await this.client.request('GET /orgs/:id', { id: groupID });
-      const { data } = res as unknown as AxiosResponse<object[]>;
-      return data;
-    }
-
-    async getGroupByName(groupName: string) {
-      const res = await this.client.request('GET /orgs/{org}', {
-        org: groupName,
-      });
-      const { data } = res as unknown as AxiosResponse<object[]>;
-      return data;
-    }
-
-    private setClient(options: object) {
-      this._client = new Octokit(options);
-    }
+  async getGroupByName(groupName: string) {
+    return this.engine.request('GET /orgs/{org}', {
+      org: groupName,
+    });
+  }
 }
