@@ -45,4 +45,14 @@ export class GitLabSmelter extends BaseSmelter {
     const repoURI = encodeURIFromPath(owner, repo);
     return this.getRepoByID(repoURI);
   }
+
+  async getGroupByID(groupID: number | string) {
+    const endpoint = `/groups/${groupID}`;
+    return this.engine.get(endpoint);
+  }
+
+  async getGroupByName(groupName: string) {
+    const groupURI = encodeURIFromPath(groupName);
+    return this.getGroupByID(groupURI);
+  }
 }

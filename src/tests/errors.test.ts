@@ -1,5 +1,5 @@
-import { gitlab } from '../index';
-import { ResourceNotOnInstanceError, WIPError } from '../../errors';
+import { gitlab } from '../gitlab';
+import { ResourceNotOnInstanceError, WIPError } from '../errors';
 
 describe('GitLabSmelter should be able to throw an error when...', () => {
   const smelter = gitlab();
