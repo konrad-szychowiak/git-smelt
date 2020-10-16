@@ -1,6 +1,6 @@
 {
   "name": "git-smelt",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "An NPM package, that unifies access to different git hosting services.",
   "author": "Konrad Szychwiak <konrad.szychowiak@gmai.com>",
   "keywords": [
