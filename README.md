@@ -4,12 +4,14 @@
 ![shield--license]
 ![GitHub contributors](https://img.shields.io/github/contributors/konrad-szychowiak/git-smelt?style=flat-square)
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/git-smelt?style=flat-square)
+[![badge--quality]](https://sonarcloud.io/dashboard?id=konrad-szychowiak_git-smelt)
 
 ![shield--code-size]
 ![shield--mini-size]
 ![npm type definitions](https://img.shields.io/npm/types/git-smelt?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/konrad-szychowiak/git-smelt?style=flat-square)
 
+[badge--quality]: https://img.shields.io/sonar/quality_gate/konrad-szychowiak_git-smelt?server=https%3A%2F%2Fsonarcloud.io&style=flat-square
 [shield--npm-tag]: https://img.shields.io/npm/v/git-smelt/latest?style=flat-square
 [shield--license]: https://img.shields.io/npm/l/git-smelt?style=flat-square
 [shield--code-size]: https://img.shields.io/github/languages/code-size/konrad-szychowiak/git-smelt?style=flat-square
