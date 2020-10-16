@@ -38,6 +38,20 @@ export class GitHubSmelter extends BaseSmelter {
       return data;
     }
 
+    async getGroupByID(groupID: number) {
+      const res = await this.client.request('GET /orgs/:id', { id: groupID });
+      const { data } = res as unknown as AxiosResponse<object[]>;
+      return data;
+    }
+
+    async getGroupByName(groupName: string) {
+      const res = await this.client.request('GET /orgs/{org}', {
+        org: groupName,
+      });
+      const { data } = res as unknown as AxiosResponse<object[]>;
+      return data;
+    }
+
     private setClient(options: object) {
       this._client = new Octokit(options);
     }

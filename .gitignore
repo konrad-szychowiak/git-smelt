@@ -1,6 +1,14 @@
+# package managers locks
+# because we are a library
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+
 .idea/
 .docz/
 lib/
+
 
 # Logs
 logs
@@ -9,9 +17,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-yarn.lock
-package-lock.json
-
 
 # tests
 coverage/

@@ -1,9 +1,19 @@
 # git-smelt
-![npm (tag)](https://img.shields.io/npm/v/git-smelt/latest?style=flat-square)
-![NPM](https://img.shields.io/npm/l/git-smelt?style=flat-square)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/konrad-szychowiak/git-smelt?style=flat-square)
-![npm type definitions](https://img.shields.io/npm/types/git-smelt?style=flat-square)
+
+![shield--npm-tag]
+![shield--license]
+![GitHub contributors](https://img.shields.io/github/contributors/konrad-szychowiak/git-smelt?style=flat-square)
 ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/git-smelt?style=flat-square)
+
+![shield--code-size]
+![shield--mini-size]
+![npm type definitions](https://img.shields.io/npm/types/git-smelt?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/konrad-szychowiak/git-smelt?style=flat-square)
+
+[shield--npm-tag]: https://img.shields.io/npm/v/git-smelt/latest?style=flat-square
+[shield--license]: https://img.shields.io/npm/l/git-smelt?style=flat-square
+[shield--code-size]: https://img.shields.io/github/languages/code-size/konrad-szychowiak/git-smelt?style=flat-square
+[shield--mini-size]: https://img.shields.io/bundlephobia/min/git-smelt?style=flat-square
 
 > 🚧 An NPM package, that unifies access to different git hosting services.
 
@@ -139,18 +149,22 @@ github().getRepoByName('konrad-szychowiak', 'git-smelt')
   // .catch()
 ```
 
-
-## ⏲️ [Changelog]
-
 ## ✍️ Contributors
 + **[konrad-szychowiak]** main creator
 + **[srflp]** 
 
-## ⚖️ License
-+ [MPL-2.0]
+## ⏲️ [Changelog]
+[![badge-changelog]][keepachangelog] 
+
+[badge-changelog]: https://img.shields.io/badge/Keep%20a%20Changelog-1.0.0-orange?style=flat-square
+[keepachangelog]: https://keepachangelog.com/en/1.0.0/
+
+## ⚖️ [License]
+[![shield--license]][License]
+
 
 [issues]: https://github.com/konrad-szychowiak/git-smelt/issues
-[MPL-2.0]: ./LICENSE
+[License]: ./LICENSE
 [Changelog]: ./CHANGELOG.md
 [konrad-szychowiak]: https://github.com/konrad-szychowiak
 [srflp]: https://github.com/srflp

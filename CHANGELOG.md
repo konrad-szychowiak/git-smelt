@@ -4,7 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] – 2020-10-??
+
+
+## [0.3.0] – 2020-10-16
+### Added
+- support for `getGroupByName`
+- support for `getGroupByID`
+
+### Removed
+- Gulp was neither used, nor necessary.
+
+
+
+## [0.2.3] - 2020-10-11
 ### Added
 - Smelter API:
   + support for `getRepoByName` to git**lab** smelter
@@ -47,6 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: https://github.com/konrad-szychowiak/git-smelt/
+[0.3.0]: https://github.com/konrad-szychowiak/git-smelt/releases/tag/v0.3.0
+[0.2.3]: https://github.com/konrad-szychowiak/git-smelt/releases/tag/v0.2.3
 [0.2.2]: https://github.com/konrad-szychowiak/git-smelt/releases/tag/v0.2.2
 [0.2.1]: https://github.com/konrad-szychowiak/git-smelt/releases/tag/v0.2.1
 [0.2.0]: https://github.com/konrad-szychowiak/git-smelt/releases/tag/v0.2.0
