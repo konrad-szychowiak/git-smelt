@@ -10,7 +10,7 @@ const CJS_FORMAT = 'cjs';
 const ESM_FORMAT = 'es';
 const MIN_FORMAT = 'min';
 
-class BaseBudle {
+class BaseBundle {
   constructor(format, fileExtension, sourcemap, plugins) {
     this.input = 'src/index.ts';
     this.output = {
@@ -23,19 +23,19 @@ class BaseBudle {
   }
 }
 
-class DTSBundle extends BaseBudle {
+class DTSBundle extends BaseBundle {
   constructor() {
     super(DTS_FORMAT, 'd.ts', false, [dts()]);
   }
 }
 
-class ESMBundle extends BaseBudle {
+class ESMBundle extends BaseBundle {
   constructor() {
     super(ESM_FORMAT, 'mjs', false /* true */, [esbuild()]);
   }
 }
 
-class CommonJSBundle extends BaseBudle {
+class CommonJSBundle extends BaseBundle {
   constructor(morePlugins, ext) {
     super(CJS_FORMAT, ext || 'js', false /* true */, [esbuild(), ...morePlugins]);
   }

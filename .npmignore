@@ -10,3 +10,5 @@ tsconfig.json
 gulpfile.js
 jest.config.js
 rollup.config.js
+.env
+pnpm-*
