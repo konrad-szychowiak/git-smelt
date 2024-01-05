@@ -25,7 +25,7 @@
   "typings": "lib/index.d.ts",
   "dependencies": {
     "@octokit/core": "^3.2.1",
-    "axios": "^0.21.0"
+    "axios": "^1.6.4"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^6.1.0",
