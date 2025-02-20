@@ -24,7 +24,7 @@
   "module": "lib/index.mjs",
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "@octokit/core": "^3.2.1",
+    "@octokit/core": "^6.1.4",
     "axios": "^0.21.0"
   },
   "devDependencies": {
